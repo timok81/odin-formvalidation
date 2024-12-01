@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "robotoregular";
+  src: url("fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("fonts/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  line-height: 1.5em;
+}
+
+html {
+  font-family: robotoregular, system-ui, sans-serif;
+
+  --menubgcolor: rgb(126, 126, 126);
+  --buttohovercolor: rgb(68, 68, 68);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.contentbox {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  border-radius: 10px;
+  width: 1000px;
+  height: 1000px;
+}
+
+header {
+  display: flex;
+  background-color: var(--menubgcolor);
+  justify-content: right;
+  align-items: center;
+  padding: 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.mainnav {
+  display: flex;
+}
+
+#content {
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(231, 231, 231);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.formcontainer {
+  margin: 32px 0px 0px 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  align-items: center;
+}
+
+form h1 {
+  margin-bottom: 32px;
+}
+
+.form-row {
+  display: flex;
+}
+
+input,
+select {
+  flex: 1 0 auto;
+  border-radius: 4px;
+  border: 0px;
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 30px;
+  margin: 0px 0px 8px 0px;
+}
+
+input {
+  padding: 8px;
+}
+
+input:invalid {
+  outline: 2px solid red;
+}
+
+label {
+  text-align: right;
+  padding-right: 20px;
+  width: 250px;
+}
+
+form textarea {
+  resize: none;
+  width: 300px;
+  height: 200px;
+  border-radius: 4px;
+  border: 0px;
+  background-color: rgb(235, 235, 235);
+  margin: 8px 0px 8px 0px;
+  padding: 8px;
+}
+
+.buttonsarea {
+  margin-left: 120px;
+  margin-top: 32px;
+}
+
+form button {
+  margin: 32px 8px 0px 8px;
+  width: 125px;
+  height: 40px;
+  font-size: 1.3em;
+
+  color: white;
+  border: 0px;
+  border-radius: 8px;
+  background-color: rgb(56, 109, 255);
+}
+
+form button:hover {
+  background-color: rgb(20, 75, 226);
+}
+
+.errorfield {
+  background: none;
+  display: flex;
+  align-items: center;
+  flex: 1 0 auto;
+  border-radius: 4px;
+  border: 0px;
+  width: 300px;
+  height: 30px;
+  margin: 8px 0px 8px 250px;
+  padding: 16px;
+}
+
+.errorfieldactive {
+  background: none;
+  color: red;
+  display: flex;
+  align-items: center;
+  flex: 1 0 auto;
+  border-radius: 4px;
+  border: 0px;
+  width: 300px;
+  height: 30px;
+  margin: 8px 0px 8px 250px;
+  padding: 16px;
+}
